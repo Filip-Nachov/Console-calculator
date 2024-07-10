@@ -44,15 +44,12 @@ python3 CalculatorGUI.py
 - **M+ (Memory Plus):** Adds the current result to memory.
 - **M- (Memory Minus):** Subtracts the current result from memory.
 - **MRC (Memory Recall):** Displays the value stored in memory.
-4. **History**
-- **HIST:** View calculation history.
-- **CLR HIST:** Clear calculation history.
-5. **Special Functions**
+4. **Special Functions**
 - **SQRT:** Calculate square root.
 - **% (Percentage):** Perform percentage calculation.
 - **Trigonometric Functions:** Calculate sine, cosine, and tangent of angles.
-6. **Clearing and Backspacing**
+5. **Clearing and Backspacing**
 - **CE (Clear Entry):** Clears the current entry.
 - **AC (All Clear):** Clears all entries and resets memory.
-7. Error Handling
+6. Error Handling
 - Displays error messages for invalid inputs or operations.
