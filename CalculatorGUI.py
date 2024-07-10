@@ -7,7 +7,7 @@ class Calculator:
     def __init__(self, root):
         self.root = root
         self.root.title("Calculator")
-        self.root.geometry("580x500")  # Set the window size
+        self.root.geometry("580x580")  # Set the window size
         self.history_file = "history.txt"
         self.history = self.load_history(self.history_file)
         self.memory = 0
@@ -23,10 +23,12 @@ class Calculator:
 
         buttons = [
             ('MRC', 1, 0), ('M-', 1, 1), ('M+', 1, 2), ('SQRT', 1, 3), ('MOD', 1, 4),
-            ('-->', 2, 0), ('7', 2, 1), ('8', 2, 2), ('9', 2, 3), ('/', 2, 4),
-            ('CE', 3, 0), ('4', 3, 1), ('5', 3, 2), ('6', 3, 3), ('*', 3, 4),
-            ('AC', 4, 0), ('1', 4, 1), ('2', 4, 2), ('3', 4, 3), ('-', 4, 4),
-            ('0', 5, 0), ('00', 5, 1), ('.', 5, 2), ('=', 5, 3), ('+', 5, 4)
+            ('LOG', 2, 0), ('EXP', 2, 1), ('SIN', 2, 2), ('COS', 2, 3), ('TAN', 2, 4),
+            ('-->', 3, 0), ('7', 3, 1), ('8', 3, 2), ('9', 3, 3), ('/', 3, 4),
+            ('CE', 4, 0), ('4', 4, 1), ('5', 4, 2), ('6', 4, 3), ('*', 4, 4),
+            ('AC', 5, 0), ('1', 5, 1), ('2', 5, 2), ('3', 5, 3), ('-', 5, 4),
+            ('0', 6, 0), ('00', 6, 1), ('.', 6, 2), ('=', 6, 3), ('+', 6, 4)
+            
         ]
 
         for (text, row, col) in buttons:
@@ -44,8 +46,6 @@ class Calculator:
     def button_click(self, text):
         if text == '=':
             self.calculate()
-        elif text == 'C':
-            self.entry.delete(0, tk.END)
         elif text == 'SQRT':
             self.single_operand_operation('SQRT')
         elif text == 'LOG':
@@ -64,10 +64,6 @@ class Calculator:
             self.store_memory('M-')
         elif text == 'MRC':
             self.recall_memory()
-        elif text == 'HIST':
-            self.show_history()
-        elif text == 'CLR HIST':
-            self.clear_history()
         elif text == 'MOD':
             self.add_operator('%')
         elif text == '-->':
