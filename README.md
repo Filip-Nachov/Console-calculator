@@ -4,7 +4,7 @@ This is a simple calculator application built using Python and tkinter.
 
 <p align="center">
 
-<img src="https://i.imgur.com/0xPbL2e.png">
+<img src="https://i.imgur.com/p9WMdEG.png">
 
 </p>
 
